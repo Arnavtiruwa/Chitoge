@@ -1,5 +1,3 @@
-
-
 import MessageHandler from '../../Handlers/MessageHandler'
 
 import BaseCommand from '../../lib/BaseCommand'
@@ -60,7 +58,7 @@ export default class Command extends BaseCommand {
 
             }
 
-            let text = `🌟 *Nezuko chan's Command List* 🌟\n\n`
+            let text = `Nezuko chan"s Command List ^_^\n\n`
 
             const keys = Object.keys(categories)
 
@@ -76,7 +74,13 @@ export default class Command extends BaseCommand {
 
                     .join(', ')}\`\`\`\n\n`
 
-            return void M.reply( 
+            return void M.reply( await request.buffer('https://wallpapercave.com/uwp/uwp1426743.png'),  
+
+            MessageType.image,            
+
+                        undefined,
+
+                        undefined,
 
                 `${text} 📝 *Note: Use ${this.client.config.prefix}help <command_name> to view the command info*`
 
@@ -117,3 +121,5 @@ export default class Command extends BaseCommand {
     }
 
     emojis = ['♟', '♻️', '🌈', '🎵', '❄', '👑', '🚫', '♦️', '✨']
+
+}
